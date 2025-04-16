@@ -229,8 +229,10 @@ function ProductList({ onHomeClick }) {
     const styleObjUl = {
         display: 'flex',
         justifyContent: 'space-between',
-        "align-items": 'center',
+        alignItems: 'center',
         width: '1100px',
+        paddingLeft: '300px',
+
     }
     const styleA = {
         color: 'white',
@@ -304,7 +306,7 @@ function ProductList({ onHomeClick }) {
             {!showCart ? (
                 <div className="product-grid">
                     {plantsArray.map((category, index) => (
-                        <div key={index}>
+                        <div className="products-body" key={index}>
                             <h1><div>{category.category}</div></h1>
                             <div className="product-list">
                                 {category.plants.map((plant, plantIndex) => (
